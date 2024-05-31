@@ -644,17 +644,17 @@ section{
       flex: 1 1 100%;
     }
 }
+/* CSS for menu icon */
+#menuIcon {
+    cursor: pointer;
+    /* Add other styles as needed */
+}
 
-        /* Example CSS for menu icon and navbar */
-        #menuIcon {
-            cursor: pointer;
-            /* Add other styles as needed */
-        }
+/* CSS for navbar */
+.navbar {
+    display: none; /* Hidden by default */
+}
 
-        .navbar {
-            display: flex; /* Hidden by default */
-        }
-
-        .navbar.active {
-            display: block; /* Show when active */
-        }
+.navbar.active {
+    display: block; /* Show when active */
+}
