@@ -88,3 +88,16 @@ function sendMessage() {
   }
 
 
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // DOM is fully loaded, now execute the script
+    const menuIcon = document.getElementById('menuIcon');
+    const navbar = document.querySelector('.navbar');
+
+    // Add click event listener to the menuIcon
+    menuIcon.addEventListener('click', function() {
+        // Toggle the active class on the navbar
+        navbar.classList.toggle('active');
+    });
+});
+
