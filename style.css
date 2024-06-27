@@ -366,7 +366,6 @@ span{
 
 
 
-
 .contact form .input-box {
     display: flex;
     justify-content: space-between;
@@ -474,7 +473,7 @@ footer {
 
 @media (max-width: 1200px) {
     html{
-        font-size: 55%;
+        font-size: 55%
     }
 }
 
@@ -520,7 +519,7 @@ section{
         padding: 1rem 3%;
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
-        display: block;
+        display: none;
     }
 
     .navbar .active {
@@ -535,8 +534,6 @@ section{
 
     .home {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .home-content h3 {
@@ -557,93 +554,126 @@ section{
 
 
 
-
-
-
-
 .skills {
     padding: 50px 0;
     text-align: center;
-    background:  rgba(8, 8, 8, 0.63);
-  }
+    background: rgba(8, 8, 8, 0.63);
+}
 
-  .heading {
+.heading {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: white;
-  }
+}
 
-  .container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-  }
+}
 
-  .row {
+.row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
+}
 
-  .bar {
+.bar {
     flex: 1 1 21%; /* Flex-grow, flex-shrink, flex-basis */
     box-sizing: border-box;
-    margin: 10px;
+    margin: 10px 5px; /* Reduced horizontal margin */
     background: rgb(145, 115, 120);
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced box shadow spread */
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s;
-  }
+}
 
-  .bar:hover {
+.bar:hover {
     transform: translateY(-10px);
-  }
+}
 
-  .info img {
+.info img {
     width: 80px;
     height: 80px;
     object-fit: contain;
     margin-bottom: 10px;
-  }
+}
 
-  .info span {
+.info span {
     display: block;
     font-size: 1.2em;
     color: #333;
-  }
+}
 
-  /* Media Queries */
-  @media (max-width: 1024px) {
+/* Media Queries */
+@media (max-width: 1024px) {
     .bar {
-      flex: 1 1 30%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .bar {
-      flex: 1 1 45%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .bar {
-      flex: 1 1 100%;
+        flex: 1 1 30%;
     }
 }
-/* CSS for menu icon */
+
+@media (max-width: 768px) {
+    .bar {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bar {
+        flex: 1 1 100%;
+    }
+    /* Add more specific styles for smaller screens if needed */
+}
+
+/* Example CSS for menu icon and navbar */
 #menuIcon {
     cursor: pointer;
+    font-size: 2em;
+    color: white;
+    margin-right: 20px;
+    display: none; /* Hidden by default on larger screens */
     /* Add other styles as needed */
 }
 
-/* CSS for navbar */
 .navbar {
-    display: none; /* Hidden by default */
+    display: flex; /* Visible by default on larger screens */
+    flex-direction: row;
+    
+    width: 100%;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    padding: 10px 0; /* Reduce padding */
 }
 
-.navbar.active {
-    display: block; /* Show when active */
+.navbar a {
+    padding: 10px 15px; /* Reduce padding between links */
+    color: white;
+    text-decoration: none;
+    margin: 0 5px; /* Reduce horizontal margin between links */
 }
 
+.navbar a:hover {
+    background: rgba(145, 115, 120, 0.9);
+}
+
+/* Ensure the menu icon and navbar are aligned on small screens */
+@media (max-width: 768px) {
+    #menuIcon {
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    .navbar {
+        display: none; /* Hide navbar by default on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: flex; /* Show when active */
+    }
+}

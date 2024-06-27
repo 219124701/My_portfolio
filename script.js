@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-let menuIcon = document.querySelector('#menu-icon');
+let menuIcon = document.querySelector('#menuIcon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () =>{
@@ -38,8 +38,8 @@ menuIcon.onclick = () =>{
 
             if(top >= offset && top < offset + height) {
                 navLinks.forEach.apply(Links => {
-                       Links.classList.remove('active');
-                       document.querySelector('header nav a[href=' + id +'}') .classList.add('active');
+                     Links.classList.remove('active');
+                     document.querySelector('header nav a[href=' + id +'}') .classList.add('active');
 
                 });  
             };
@@ -70,7 +70,7 @@ function sendMessage() {
       Email: document.querySelector("#Email").value,
       Subject: document.querySelector("#Subject").value,
       Mobile: document.querySelector("#Mobile").value,
-      Message: document.querySelector("#Message").value
+      Message: document.querySelector("#Message").value,
     };
   
     var serviceID = "service_sr97xy8"; // Email Service ID
