@@ -404,11 +404,14 @@ span{
     font-size: 24px;
     color: #007bff;
     transition: transform 0.3s ease-in-out;
+    position: relative; /* Ensure proper positioning */
+    z-index: 1; /* Ensure a higher z-index */
 }
 
 .portfolio-layer i:hover {
     transform: translateY(-3px);
 }
+
 
 
 
