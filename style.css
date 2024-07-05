@@ -410,8 +410,6 @@ span{
     transform: translateY(-3px);
 }
 
-
-  
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -441,7 +439,7 @@ span{
   }
   
   .contact-details a {
-    color: var(--main-color) /* Custom pink color */
+    color: var(--main-color); /* Custom pink color */
     text-decoration: none;
     font-size: 1.4rem; /* Reduced font size */
     border-bottom: 1px solid transparent; /* Remove default underline */
@@ -449,7 +447,7 @@ span{
   
   .contact-details a:hover {
     text-decoration: underline;
-    border-bottom-color: var(--main-color) /* Custom underline color on hover */
+    border-bottom-color: var(--main-color); /* Custom underline color on hover */
   }
   
   .contact-form-wrapper {
