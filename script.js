@@ -49,15 +49,31 @@ menuIcon.onclick = () =>{
 
 
 
-function toggleDarkMode() {
-    document.body.classList.add('dark-mode');
-    document.body.classList.remove('light-mode');
-}
 
-function toggleLightMode() {
-    document.body.classList.remove('dark-mode');
-    document.body.classList.add('light-mode');
-}
+  function toggleMode() {
+    const body = document.body;
+    const modeToggleBtn = document.getElementById('modeToggleBtn');
+    
+    if (body.classList.contains('dark-mode')) {
+      body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
+      modeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>'; // Change icon if needed
+    } else {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      modeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>'; // Change icon if needed
+    }
+  }
+  
+  // Initialize mode based on current preference or default to light mode
+  document.addEventListener('DOMContentLoaded', (event) => {
+    if (document.body.classList.contains('dark-mode')) {
+      document.getElementById('modeToggleBtn').innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+      document.getElementById('modeToggleBtn').innerHTML = '<i class="fas fa-moon"></i>';
+    }
+  });
+  
 
 
 function sendMessage() {
@@ -100,4 +116,13 @@ function sendMessage() {
         navbar.classList.toggle('active');
     });
 });
+
+
+function scrollToBottom() {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
+}
+
 

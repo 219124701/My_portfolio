@@ -31,13 +31,11 @@
         </nav>
 
         <div class="mode-switch" style="border: 1px grey solid; width: 40px; height: 25px; background-color: white; text-align: center; border-radius: 20px;">
-            <button id="darkModeBtn" onclick="toggleDarkMode()">
-              <i class="fas fa-moon"></i>
-            </button>
-            <button id="lightModeBtn" onclick="toggleLightMode()">
-              <i class="fas fa-sun"></i>
-            </button>
-          </div>
+          <button id="modeToggleBtn" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        
   </header>
   
     
@@ -190,29 +188,30 @@ The calculator I designed using HTML, CSS, and JavaScript offers a user-friendly
     <!-----------SECTION CONTACT--------------->
     
 
-<section class="contact" id="contact">
-  <h2 class="heading">Contact <span>Me!</span></h2>
-  <div class="contact-container">
-    <div class="contact-details">
-      <h3>Contact Information</h3>
-      <p><strong>Email:</strong> <a href="ongeyane96@gmail.com">ongeyane96@gmail.com</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/219124701" target="_blank">https://github.com/219124701</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/okuhle-ngeyane-a34232259/" target="_blank">https://www.linkedin.com/in/okuhle-ngeyane-a34232259/</a></p>
-    </div>
-    <div class="contact-form-wrapper">
-      <form id="contact-form" action="https://formspree.io/f/mvgpplre" method="post" onsubmit="sendMessage()">
-        <div class="input-box">
-          <input type="text" id="FullName" name="FullName" placeholder="Full Name" required>
-          <input type="email" id="Email" name="Email" placeholder="Email Address" required>
-          <input type="text" id="Subject" name="Subject" placeholder="Subject" required>
-          <input type="text" id="Mobile" name="Mobile" placeholder="Mobile Number" required>
-          <textarea id="Message" name="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me!</span></h2>
+      <div class="contact-container">
+        <div class="contact-form-wrapper">
+          <form id="contact-form" action="https://formspree.io/f/mvgpplre" method="post" onsubmit="sendMessage()">
+            <div class="input-box">
+              <input type="text" id="FullName" name="FullName" placeholder="Full Name" required>
+              <input type="email" id="Email" name="Email" placeholder="Email Address" required>
+              <input type="text" id="Subject" name="Subject" placeholder="Subject" required>
+              <input type="text" id="Mobile" name="Mobile" placeholder="Mobile Number" required>
+              <textarea id="Message" name="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            </div>
+            <input type="submit" value="Send Message" class="btn">
+          </form>
         </div>
-        <input type="submit" value="Send Message" class="btn">
-      </form>
-    </div>
-  </div>
-</section>
+        <div class="contact-details">
+          <h3>Contact Information</h3>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:ongeyane96@gmail.com">ongeyane96@gmail.com</a></p>
+          <p><i class="fa-brands fa-github"></i> <a href="https://github.com/219124701" target="_blank">GitHub</a></p>
+          <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/okuhle-ngeyane-a34232259/" target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    
 
 
 
@@ -226,12 +225,10 @@ The calculator I designed using HTML, CSS, and JavaScript offers a user-friendly
       
     
 
-    <!--------scroll up button------>
+ <!-- Scroll to Bottom Button -->
+<button onclick="scrollToBottom()" id="scrollBtn" class="scrollBtn"><i class="fa-solid fa-angle-down"></i></button>
 
-<button onclick="scrollToTop()" id="scrollBtn" class="scrollBtn"></button>
-<div class="footer-iconTop">
-    <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
-</div>
+
     <!------------footer--------->
     
     <footer class="footer"> 
